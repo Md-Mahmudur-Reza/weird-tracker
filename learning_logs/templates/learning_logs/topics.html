@@ -1,0 +1,18 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+<h3>Topics :</h3>
+
+<ul>
+    {% for topic in topics %}
+    <li>
+        <a href="{% url 'learning_logs:topic' topic.id %}">{{topic}}</a>
+    </li>
+    {% empty %}
+    <b>No topics hase been added yet.</b>
+    {% endfor %}
+</ul>
+
+<b><a href="{% url 'learning_logs:index' %}" style="text-decoration: none;">back to homepage</a></b>
+
+{% endblock content %}
