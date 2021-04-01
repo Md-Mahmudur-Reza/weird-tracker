@@ -16,5 +16,9 @@
     {% endfor %}
 </ul>
 
+<h3>
+    <a href="{% url 'learning_logs:new_entry' topic.id %}">Add new entry</a>
+</h3>
+
 <b><a href="{% url 'learning_logs:topics' %}" style="text-decoration: none;">back</a></b>
 {% endblock content %}
