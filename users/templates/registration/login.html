@@ -1,7 +1,7 @@
 {% extends "learning_logs/base.html" %}
 
 {% block content %}
-{% load crispy_forms_tags %}
+
 
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
@@ -9,7 +9,7 @@
 
 <form method="post" action="{% url 'users:login' %}">
     {% csrf_token %}
-    {{ form|crispy}}
+    {{ form.as_p}}
 
     <button name="submit">log in</button>
     <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />

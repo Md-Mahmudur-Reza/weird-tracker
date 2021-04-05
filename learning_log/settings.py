@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # my_app
     'learning_logs',
     'users',
-    "crispy_forms",
+    # third_payty_app
+
 ]
 
 MIDDLEWARE = [
@@ -122,4 +124,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_URL = 'users:login'
